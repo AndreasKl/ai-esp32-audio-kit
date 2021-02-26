@@ -9,6 +9,12 @@ Things I learned while playing with the audio kit.
 $ sudo dnf install git wget make ncurses-devel flex bison gperf python python3-pyserial
 ```
 
+```
+sudo usermod -a -G dialout $USER
+
+## restart ##
+```
+
 **Download the toolchain**
 
 ```bash
@@ -29,13 +35,6 @@ git clone --recursive https://github.com/Ai-Thinker-Open/ESP32-A1S-AudioKit.git
 22:05 $ . ./export.sh
 
 
-cd ./ESP32-A1S-AudioKit/examples/get-started/play_mp3_dac
-make menuconfig
-make flash monitor
-
-
-
-
 21:45 $ cat ~/Coding/ESP32-A1S-AudioKit/.env
 export PATH="$PATH:$HOME/Tools/esp/xtensa-esp32-elf/bin"
 export ADF_PATH="/home/andreaskluth/Coding/ESP32-A1S-AudioKit"
@@ -44,6 +43,9 @@ export IDF_PATH="/home/andreaskluth/Coding/ESP32-A1S-AudioKit/esp-idf"
 
 ## Compile a demo app
 ```bash
+cd ./ESP32-A1S-AudioKit/examples/get-started/play_mp3_dac
+make menuconfig
+make flash monitor
 ```
 
 
